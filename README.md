@@ -1,39 +1,86 @@
 ---
 layout: home
-title: Just the Class
+title: 数学分析(B1)
 nav_exclude: true
 permalink: /:path/
 seo:
   type: Course
-  name: Just the Class
+  name: 数学分析(B1)
 ---
 
-# Just the Class
+# 数学分析(B1)
 
-Just the Class is a GitHub Pages template developed for the purpose of quickly deploying course websites. In addition to serving plain web pages and files, it provides a boilerplate for:
+欢迎来到《数学分析(B1)》课程主页。
 
-- [announcements](announcements.md),
-- a [course calendar](calendar.md),
-- a [staff](staff.md) page,
-- and a weekly [schedule](schedule.md).
+本网站用于发布课程公告、课程安排、习题课信息、作业提交说明、答疑安排以及相关学习资料。请同学们定期查看本页面及相关栏目，以免遗漏重要通知。
 
-Just the Class is a template that extends the popular [Just the Docs](https://github.com/just-the-docs/just-the-docs) theme, which provides a robust and thoroughly-tested foundation for your website. Just the Docs include features such as:
+---
 
-- automatic [navigation structure](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/),
-- instant, full-text [search](https://just-the-docs.github.io/just-the-docs/docs/search/) and page indexing,
-- and a set of [UI components](https://just-the-docs.github.io/just-the-docs/docs/ui-components) and authoring [utilities](https://just-the-docs.github.io/just-the-docs/docs/utilities).
+## 课程基本信息
 
-## Getting Started
+| 项目 | 内容 |
+|---|---|
+| 课程名称 | 数学分析(B1) |
+| 课程编号 | MATH1006.10 |
+| 任课教师 | 张明敏 |
+| 助教 | 陈璟皓、赖淇玮、梁思源 |
+| 学期 | 26 秋 |
+| 上课地点 | 2210 |
+| 上课时间 | 1(3,4); 3(3,4); 5(3,4) |
 
-Getting started with Just the Class is simple.
+---
 
-1. Create a [new repository based on Just the Class](https://github.com/kevinlin1/just-the-class/generate).
-1. Update `_config.yml` and `README.md` with your course information. [Be sure to update the url and baseurl](https://mademistakes.com/mastering-jekyll/site-url-baseurl/).
-1. Configure a [publishing source for GitHub Pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages). Your course website is now live!
-1. Edit and create `.md` [Markdown files](https://guides.github.com/features/mastering-markdown/) to add more content pages.
+## 快速入口
 
-Just the Class has been used by instructors at Stanford University ([CS 161](https://stanford-cs161.github.io/winter2021/)), UC Berkeley ([Data 100](https://ds100.org/fa21/)), UC Santa Barbara ([CSW8](https://ucsb-csw8.github.io/s22/)), Northeastern University ([CS4530/5500](https://neu-se.github.io/CS4530-CS5500-Spring-2021/)), and Carnegie Mellon University ([17-450/17-950](https://cmu-crafting-software.github.io/)). Share your course website and find more examples in the [show and tell discussion](https://github.com/kevinlin1/just-the-class/discussions/categories/show-and-tell)!
+- [课程公告](announcements/)
+- [课程日历](calendar/)
+- [每周安排](schedule/)
+- [教学团队](staff/)
 
-### Local development environment
+后续课程资料、习题课安排和作业说明会根据实际教学进度逐步更新。
 
-Just the Class requires no special Jekyll plugins and can run on GitHub Pages' standard Jekyll compiler. To setup a local development environment, clone your template repository and follow the GitHub Docs on [Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll).
+---
+
+## 课程说明
+
+---
+
+## 助教安排
+
+本课程共有三位助教：
+
+- 陈璟皓
+- 赖淇玮
+- 梁思源
+
+每次课原则上至少保证一名助教随堂。开学初期由赖淇玮、梁思源两位助教负责随堂；后续随堂安排会根据助教课表和课程实际情况进行调整。
+
+课程开始前会建立课程 QQ 群，用于发布通知、答疑和共享课程资料。请同学们及时加入课程群，并留意群内通知。
+
+---
+
+## 分组与答疑
+
+为方便答疑与沟通，后续会将班内同学按照学号顺序大致分为三组。每组对应一名助教，同学们在学习和作业过程中遇到问题，可以优先联系本组对应助教。
+
+如问题涉及作业批改标准或具体批改细节，也可以由对应助教进一步与负责批改该次作业的助教沟通。
+
+---
+
+## 作业提交与批改
+
+本课程作业分为纸质作业和电子作业两类。
+
+### 纸质作业
+
+纸质作业由赖淇玮、梁思源两位助教负责批改。
+
+原则上，同一周的纸质作业由同一位助教统一批改，以尽量保证单次作业批改标准的一致性。几位助教也会提前协商大致评分标准，以保持不同周次之间的批改标准尽量一致。
+
+### 电子作业
+
+电子作业由陈璟皓助教负责批改。
+
+电子作业可发送至：
+chenjinghao@mail.ustc.edu.cn
+也可以通过 QQ 提交给陈璟皓助教。
