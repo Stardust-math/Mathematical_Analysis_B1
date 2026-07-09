@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 课程日历
+nav_order: 4
 description: 数学分析(B1)课程教学进度、作业与习题课安排。
 ---
 
