@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Announcements
+title: 课程公告
 nav_exclude: true
-description: A feed containing all of the class announcements.
+description: 数学分析(B1)课程公告与重要通知。
 ---
 
-# Announcements
+# 课程公告
 
-Announcements are stored in the `_announcements` directory and rendered according to the layout file, `_layouts/announcement.html`.
+本页面用于发布《数学分析(B1)》课程公告、重要通知、作业提醒、习题课安排及其他课程相关信息。请同学们定期查看，并以课程 QQ 群及任课教师、助教的最新通知为准。
 
 {% assign announcements = site.announcements | reverse %}
 {% for announcement in announcements %}
