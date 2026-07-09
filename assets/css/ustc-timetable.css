@@ -4,22 +4,32 @@
   margin-top: 1.2rem;
 }
 
+/* 只在加载本课表时放宽 Just the Docs 的正文区域 */
+.main-content-wrap {
+  max-width: 1180px;
+}
+
+.main-content {
+  max-width: 1180px;
+}
+
 .ustc-timetable {
   width: 100%;
-  min-width: 760px;
+  min-width: 640px;
+  table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid #dfe3ea;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: #ffffff;
 }
 
 .ustc-timetable th,
 .ustc-timetable td {
   border-right: 1px solid #dfe3ea;
   border-bottom: 1px solid #dfe3ea;
-  padding: 0.55rem 0.45rem;
+  padding: 0.38rem 0.32rem;
   text-align: center;
   vertical-align: middle;
 }
@@ -39,51 +49,65 @@
   font-weight: 700;
 }
 
+.ustc-timetable thead th {
+  font-size: 0.88rem;
+}
+
 .ustc-timetable .period-header {
-  width: 92px;
+  width: 76px;
+  font-size: 0.82rem;
+  line-height: 1.25;
 }
 
 .ustc-timetable .time-range {
   display: block;
-  margin-top: 0.2rem;
-  font-size: 0.78rem;
+  margin-top: 0.12rem;
+  font-size: 0.68rem;
   font-weight: 400;
   color: #6b7280;
 }
 
 .ustc-timetable .course-cell {
-  background: #eef5ff;
-  padding: 0.45rem;
+  padding: 0.28rem;
+  background: #f7f8fa;
 }
 
 .ustc-timetable .course-card {
   display: flex;
-  min-height: 86px;
+  min-height: 72px;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.18rem;
-  border: 1px solid #c8dfff;
-  border-radius: 10px;
-  background: #f8fbff;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  gap: 0.08rem;
+
+  border-radius: 8px;
+  border: none;
+  background-color: #5c6170;
+  color: #ffffff;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.10),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.20);
 }
 
 .ustc-timetable .course-code {
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.15;
 }
 
 .ustc-timetable .course-name {
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   font-weight: 700;
-  color: #1d4ed8;
+  color: #ffffff;
+  line-height: 1.2;
 }
 
 .ustc-timetable .course-info {
-  font-size: 0.78rem;
-  color: #4b5563;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.15;
 }
 
 .schedule-note {
