@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="{{ '/assets/css/ustc-timetable.css' | relative_url }}">
+
+<div class="ustc-timetable-wrap">
+  <table class="ustc-timetable">
+    <thead>
+      <tr>
+        <th>节次</th>
+        {% for day in page.days %}
+        <th>{{ day }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for period in page.periods %}
+      <tr>
+        <td class="period-header">
+          第 {{ period.number }} 节
+          <span class="time-range">{{ period.time }}</span>
+        </td>
+
+        {% for day in page.days %}
+          {% assign class_here = nil %}
+          {% for item in page.classes %}
+            {% if item.day == day and item.start_period == period.number %}
+              {% assign class_here = item %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign covered = false %}
+          {% for item in page.classes %}
+            {% if item.day == day and item.start_period < period.number and item.end_period >= period.number %}
+              {% assign covered = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% unless covered %}
+            {% if class_here %}
+            {% assign rowspan = class_here.end_period | minus: class_here.start_period | plus: 1 %}
+            <td class="course-cell" rowspan="{{ rowspan }}">
+              <div class="course-card">
+                {% if class_here.code %}
+                <div class="course-code">{{ class_here.code }}</div>
+                {% endif %}
+                <div class="course-name">{{ class_here.name }}</div>
+                {% if class_here.instructor %}
+                <div class="course-info">{{ class_here.instructor }}</div>
+                {% endif %}
+                {% if class_here.location %}
+                <div class="course-info">{{ class_here.location }}</div>
+                {% endif %}
+              </div>
+            </td>
+            {% else %}
+            <td></td>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{{ content }}
