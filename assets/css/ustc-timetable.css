@@ -1,0 +1,93 @@
+.ustc-timetable-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1.2rem;
+}
+
+.ustc-timetable {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #dfe3ea;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ustc-timetable th,
+.ustc-timetable td {
+  border-right: 1px solid #dfe3ea;
+  border-bottom: 1px solid #dfe3ea;
+  padding: 0.55rem 0.45rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ustc-timetable th:last-child,
+.ustc-timetable td:last-child {
+  border-right: none;
+}
+
+.ustc-timetable tr:last-child td {
+  border-bottom: none;
+}
+
+.ustc-timetable thead th,
+.ustc-timetable .period-header {
+  background: #f5f7fb;
+  font-weight: 700;
+}
+
+.ustc-timetable .period-header {
+  width: 92px;
+}
+
+.ustc-timetable .time-range {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.ustc-timetable .course-cell {
+  background: #eef5ff;
+  padding: 0.45rem;
+}
+
+.ustc-timetable .course-card {
+  display: flex;
+  min-height: 86px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.18rem;
+  border: 1px solid #c8dfff;
+  border-radius: 10px;
+  background: #f8fbff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.ustc-timetable .course-code {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.ustc-timetable .course-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.ustc-timetable .course-info {
+  font-size: 0.78rem;
+  color: #4b5563;
+}
+
+.schedule-note {
+  margin-top: 1rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
