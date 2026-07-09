@@ -34,8 +34,8 @@ seo:
 
 - [课程说明](about/)
 - [课程公告](announcements/)
-- [课程日历](calendar/)
 - [每周安排](schedule/)
+- [课程日历](calendar/)
 - [教学团队](staff/)
 
 后续课程资料、习题课安排和作业说明会根据实际教学进度逐步更新。
