@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 每周安排
+nav_order: 5
 description: 数学分析(B1)课程每周上课、答疑与作业安排。
 ---
 
