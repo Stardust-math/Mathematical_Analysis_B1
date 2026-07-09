@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 教学团队
+nav_order: 2
 description: 数学分析(B1)课程任课教师与助教信息。
 ---
 
