@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 课程说明
+nav_order: 1
 description: 数学分析(B1)课程基本说明、学习要求与作业安排。
 ---
 
