@@ -49,3 +49,33 @@ summary {
     }
   }
 }
+
+// Course font settings
+body,
+.site-title,
+.site-nav,
+.nav-list,
+.main-content,
+.main-header,
+.search,
+.search-input,
+.breadcrumb-nav,
+.table-wrapper,
+.announcement,
+.staffer,
+.schedule,
+.ustc-timetable,
+button,
+input,
+textarea,
+select {
+  font-family: "KaiTi", "STKaiti", "Kaiti SC", "楷体", serif;
+}
+
+code,
+pre,
+.highlight,
+.rouge-code,
+.rouge-table {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
