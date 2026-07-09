@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 课程公告
-nav_exclude: true
+nav_order: 3
 description: 数学分析(B1)课程公告与重要通知。
 ---
 
