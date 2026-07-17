@@ -33,6 +33,13 @@ jobs:
           source: ./
           destination: ./_site
 
+      # jekyll-build-pages runs in a container. Normalize ownership before
+      # the following host-runner step writes the Pagefind bundle.
+      - name: Normalize Jekyll output permissions
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" ./_site
+          test -w ./_site
+
       - name: Build Pagefind search index
         run: npx --yes pagefind@1.5.2
 
