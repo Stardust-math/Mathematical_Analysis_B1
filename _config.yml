@@ -17,14 +17,15 @@ title: 数学分析(B1)
 tagline: 数学分析(B1)课程主页
 description: 中国科学技术大学《数学分析(B1)》课程主页
 author: 陈璟皓、赖淇玮、梁思源
+lang: zh-CN
 baseurl: '/Mathematical_Analysis_B1' # the subpath of your site, e.g. /blog
 url: 'https://stardust-math.github.io' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "pagefind.yml"]
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.12.0
 color_scheme: light
-search_enabled: true
+search_enabled: false
 heading_anchors: true
 permalink: pretty
 aux_links:

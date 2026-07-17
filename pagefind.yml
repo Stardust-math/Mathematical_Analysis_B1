@@ -1,0 +1,17 @@
+site: _site
+output_subdir: pagefind
+
+# 只索引实际课程正文。
+root_selector: "#main-content main"
+
+# 排除目录副本、标题锚点图标和无障碍辅助文本。
+exclude_selectors:
+  - "#markdown-toc"
+  - ".anchor-heading"
+  - ".sr-only"
+
+# 保留课程编号、邮箱、周次范围等常用字符。
+include_characters: ".@_+-"
+
+keep_index_url: false
+write_playground: false

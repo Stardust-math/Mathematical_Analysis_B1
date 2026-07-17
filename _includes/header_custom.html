@@ -1,0 +1,113 @@
+<div
+  class="course-search"
+  role="search"
+  data-course-search
+  data-search-module="{{ '/assets/js/course-search.js' | relative_url }}"
+  data-pagefind-module="{{ '/pagefind/pagefind.js' | relative_url }}"
+  data-pagefind-highlight-module="{{ '/pagefind/pagefind-highlight.js' | relative_url }}"
+  data-search-base-url="{{ site.baseurl | default: '' | append: '/' }}"
+>
+  <button
+    class="course-search__trigger"
+    type="button"
+    data-search-open
+    aria-haspopup="dialog"
+    aria-controls="course-search-dialog"
+    aria-keyshortcuts="Control+K Meta+K"
+  >
+    <svg
+      class="course-search__trigger-icon"
+      viewBox="0 0 24 24"
+      aria-hidden="true">
+      <circle cx="11" cy="11" r="7"></circle>
+      <path d="m20 20-4.2-4.2"></path>
+    </svg>
+
+    <span class="course-search__trigger-text">
+      搜索课程内容
+    </span>
+
+    <kbd
+      class="course-search__shortcut"
+      data-search-shortcut-label>
+      Ctrl K
+    </kbd>
+  </button>
+
+  <dialog
+    class="course-search__dialog"
+    id="course-search-dialog"
+    data-search-dialog
+    aria-labelledby="course-search-title"
+  >
+    <div
+      class="course-search__panel"
+      data-search-panel
+    >
+      <h2
+        class="sr-only"
+        id="course-search-title">
+        站内搜索
+      </h2>
+
+      <div class="course-search__header">
+        <div class="course-search__input-wrap">
+          <svg
+            class="course-search__input-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4.2-4.2"></path>
+          </svg>
+
+          <label
+            class="sr-only"
+            for="course-search-input">
+            搜索课程内容
+          </label>
+
+          <input
+            class="course-search__input"
+            id="course-search-input"
+            type="search"
+            inputmode="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="搜索课程说明、教师、公告、周次、作业……"
+            aria-controls="course-search-results"
+            data-search-input
+          >
+
+          <button
+            class="course-search__clear"
+            type="button"
+            aria-label="清空搜索内容"
+            data-search-clear
+            hidden>
+            ×
+          </button>
+        </div>
+
+        <button
+          class="course-search__close"
+          type="button"
+          data-search-close>
+          关闭
+        </button>
+      </div>
+
+      <p
+        class="course-search__status"
+        data-search-status
+        aria-live="polite">
+      </p>
+
+      <div
+        class="course-search__results"
+        id="course-search-results"
+        data-search-results
+        aria-label="搜索结果">
+      </div>
+    </div>
+  </dialog>
+</div>
