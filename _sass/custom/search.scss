@@ -1,53 +1,70 @@
 .course-search {
-  width: 100%;
   min-width: 0;
 }
 
+/*
+ * Search trigger
+ *
+ * The outer .search and .search-input-wrap classes reuse the native
+ * Just the Docs search layout. This keeps the trigger aligned with
+ * the theme header on both desktop and mobile.
+ */
 .course-search__trigger {
+  appearance: none;
   display: flex;
   width: 100%;
-  min-height: 2.5rem;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.45rem 0.7rem;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  background: $white;
-  color: $grey-dk-200;
-  box-shadow:
-    0 1px 2px
-    rgba(0, 0, 0, 0.04);
+  gap: $sp-2;
+  padding:
+    $sp-2
+    $gutter-spacing-sm;
+  border: 0;
+  background-color:
+    $search-background-color;
+  color: $grey-dk-100;
   cursor: pointer;
   font: inherit;
   text-align: left;
-  transition:
-    border-color 0.15s ease,
-    box-shadow 0.15s ease,
-    color 0.15s ease;
+
+  @include mq(md) {
+    padding:
+      $sp-2
+      $gutter-spacing-sm
+      $sp-2
+      $gutter-spacing;
+    background-color:
+      $body-background-color;
+  }
 
   &:hover {
-    border-color: $grey-dk-100;
-    color: $grey-dk-300;
+    color: $body-text-color;
+
+    .course-search__trigger-icon {
+      color: $link-color;
+    }
   }
 
   &:focus-visible {
-    border-color: $purple-000;
-    box-shadow:
-      0 0 0 3px
-      rgba(114, 83, 237, 0.18);
-    outline: none;
+    outline:
+      2px solid
+      $link-color;
+    outline-offset: -2px;
+
+    .course-search__trigger-icon {
+      color: $link-color;
+    }
   }
 
   &[aria-busy="true"] {
     cursor: progress;
-    opacity: 0.72;
+    opacity: 0.68;
   }
 }
 
 .course-search__trigger-icon,
 .course-search__input-icon {
-  width: 1rem;
-  height: 1rem;
+  width: #{$sp-4 * 1.2};
+  height: #{$sp-4 * 1.2};
   flex: 0 0 auto;
   fill: none;
   stroke: currentColor;
@@ -56,32 +73,53 @@
   stroke-width: 2;
 }
 
+.course-search__trigger-icon {
+  color: $grey-dk-000;
+}
+
 .course-search__trigger-text {
   min-width: 0;
   flex: 1 1 auto;
   overflow: hidden;
+  color: inherit;
+  font-size: 1rem;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  @include mq(md) {
+    font-size: 0.875rem;
+  }
 }
 
 .course-search__shortcut {
+  display: none;
   flex: 0 0 auto;
-  padding: 0.12rem 0.38rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.35rem;
   border: 1px solid $border-color;
-  border-radius: 0.3rem;
-  background: $grey-lt-000;
-  color: $grey-dk-200;
+  border-radius: 0.25rem;
+  background-color: $grey-lt-000;
+  color: $grey-dk-100;
   font-family:
     "SFMono-Regular",
     Consolas,
     "Liberation Mono",
     Menlo,
     monospace;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
+  font-weight: normal;
   line-height: 1.35;
   white-space: nowrap;
+
+  @include mq(sm) {
+    display: inline-flex;
+  }
 }
 
+/*
+ * Search dialog
+ */
 .course-search__dialog {
   position: fixed;
   inset:
@@ -97,19 +135,24 @@
   margin: 0;
   padding: 0;
   border: 0;
-  border-radius: 0.75rem;
-  background: $white;
-  color: $grey-dk-300;
+  border-radius: $border-radius;
+  background-color:
+    $body-background-color;
+  color: $body-text-color;
   box-shadow:
-    0 1.5rem 4rem
-    rgba(0, 0, 0, 0.22);
+    0 1px 2px
+      rgba(0, 0, 0, 0.12),
+    0 3px 10px
+      rgba(0, 0, 0, 0.08),
+    0 20px 60px
+      rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transform:
     translate(-50%, -50%);
 
   &::backdrop {
-    background:
-      rgba(32, 31, 36, 0.48);
+    background-color:
+      rgba(0, 0, 0, 0.36);
     backdrop-filter: blur(2px);
   }
 }
@@ -119,18 +162,20 @@
   max-height:
     min(82vh, 46rem);
   flex-direction: column;
-  background: $white;
+  background-color:
+    $body-background-color;
 }
 
 .course-search__header {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.8rem;
+  gap: $sp-2;
+  padding: $sp-3;
   border-bottom:
-    1px solid
+    $border
     $border-color;
-  background: $white;
+  background-color:
+    $body-background-color;
 }
 
 .course-search__input-wrap {
@@ -139,44 +184,52 @@
   min-width: 0;
   flex: 1 1 auto;
   align-items: center;
+  border-radius: $border-radius;
+  box-shadow:
+    0 1px 2px
+      rgba(0, 0, 0, 0.12),
+    0 3px 10px
+      rgba(0, 0, 0, 0.08);
 }
 
 .course-search__input-icon {
   position: absolute;
-  left: 0.75rem;
+  left: $sp-3;
   z-index: 1;
-  color: $grey-dk-200;
+  color: $grey-dk-000;
   pointer-events: none;
 }
 
 .course-search__input {
   width: 100%;
   min-width: 0;
-  height: 2.75rem;
+  height: $sp-8;
   padding:
-    0.55rem
-    2.65rem
-    0.55rem
-    2.35rem;
-  border:
-    1px solid
-    $border-color;
-  border-radius: 0.55rem;
-  background: $grey-lt-000;
-  color: $grey-dk-300;
+    $sp-2
+    #{$gutter-spacing-sm + $sp-4}
+    $sp-2
+    #{$gutter-spacing-sm + $sp-5};
+  border: 0;
+  border-radius: $border-radius;
+  background-color:
+    $search-background-color;
+  color: $body-text-color;
   font: inherit;
+  font-size: 1rem;
 
   &::placeholder {
     color: $grey-dk-100;
   }
 
   &:focus {
-    border-color: $purple-000;
-    background: $white;
-    box-shadow:
-      0 0 0 3px
-      rgba(114, 83, 237, 0.14);
-    outline: none;
+    outline:
+      2px solid
+      $link-color;
+    outline-offset: -2px;
+
+    + .course-search__input-icon {
+      color: $link-color;
+    }
   }
 
   &::-webkit-search-cancel-button {
@@ -187,71 +240,78 @@
 .course-search__clear,
 .course-search__close {
   border: 0;
-  background: transparent;
-  color: $grey-dk-200;
+  background-color: transparent;
+  color: $grey-dk-100;
   cursor: pointer;
   font: inherit;
 
   &:hover {
-    color: $grey-dk-300;
+    color: $body-text-color;
   }
 
   &:focus-visible {
-    border-radius: 0.35rem;
-    box-shadow:
-      0 0 0 3px
-      rgba(114, 83, 237, 0.18);
-    outline: none;
+    border-radius: $border-radius;
+    outline:
+      2px solid
+      $link-color;
+    outline-offset: 1px;
   }
 }
 
 .course-search__clear {
   position: absolute;
-  right: 0.4rem;
+  right: $sp-2;
   display: inline-flex;
-  width: 1.9rem;
-  height: 1.9rem;
+  width: $sp-6;
+  height: $sp-6;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 1;
 }
 
 .course-search__close {
   flex: 0 0 auto;
-  padding: 0.45rem 0.25rem;
+  padding:
+    $sp-2
+    $sp-1;
   white-space: nowrap;
 }
 
 .course-search__status {
   margin: 0;
-  padding: 0.65rem 1rem;
+  padding:
+    $sp-2
+    $sp-4;
   border-bottom:
-    1px solid
+    $border
     $border-color;
-  color: $grey-dk-200;
-  font-size: 0.82rem;
+  color: $grey-dk-100;
+  font-size: 0.8rem;
 }
 
 .course-search__results {
   min-height: 12rem;
-  padding: 0.75rem;
+  padding: $sp-2;
   overflow-y: auto;
-  overscroll-behavior:
-    contain;
+  overscroll-behavior: contain;
+  background-color:
+    $body-background-color;
   transition:
-    opacity 0.12s ease;
+    opacity
+    linear
+    #{$transition-duration * 0.5};
 
   &[aria-busy] {
-    opacity: 0.62;
+    opacity: 0.6;
   }
 }
 
 .course-search__result {
-  padding: 0.35rem;
+  padding: $sp-1;
   border-bottom:
-    1px solid
+    $border
     $border-color;
 
   &:last-child {
@@ -262,75 +322,92 @@
 .course-search__page-link,
 .course-search__sub-link {
   display: block;
-  border-radius: 0.5rem;
+  border-radius: $border-radius;
   color: inherit;
+  outline-offset: -1px;
   text-decoration: none;
 
-  &:hover {
-    background: $grey-lt-000;
+  &:hover,
+  &:focus-visible {
+    background-color:
+      $feedback-color;
     text-decoration: none;
   }
 
   &:focus-visible {
-    background: $grey-lt-000;
-    box-shadow:
-      0 0 0 2px
-      $purple-000;
-    outline: none;
+    outline:
+      2px solid
+      $link-color;
   }
 }
 
 .course-search__page-link {
-  padding: 0.65rem 0.7rem;
+  padding:
+    $sp-2
+    $sp-3;
 }
 
 .course-search__page-link-title {
   display: block;
-  color: $purple-000;
+  color: $link-color;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .course-search__page-link-excerpt,
 .course-search__sub-link-excerpt {
-  margin: 0.25rem 0 0;
-  color: $grey-dk-200;
+  margin:
+    $sp-1
+    0
+    0;
+  color:
+    $search-result-preview-color;
   line-height: 1.55;
 }
 
 .course-search__page-link-excerpt {
-  font-size: 0.86rem;
+  font-size: 0.875rem;
 }
 
 .course-search__sub-results {
   margin:
-    0.15rem
+    $sp-1
     0
-    0.45rem
-    1rem;
+    $sp-2
+    $sp-4;
   padding:
-    0 0 0 0.75rem;
+    0
+    0
+    0
+    $sp-3;
   border-left:
-    2px solid
-    $grey-lt-100;
+    $border
+    $border-color;
   list-style: none;
 
-  li::before {
-    display: none;
+  li {
+    margin: 0;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
 .course-search__sub-link {
-  padding: 0.48rem 0.6rem;
+  padding:
+    $sp-2
+    $sp-3;
 }
 
 .course-search__sub-link-title {
   display: block;
-  color: $grey-dk-300;
-  font-size: 0.9rem;
+  color: $body-heading-color;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .course-search__sub-link-excerpt {
@@ -343,36 +420,46 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: $sp-5;
   text-align: center;
 }
 
 .course-search__message-title {
   margin: 0;
-  color: $grey-dk-300;
+  color: $body-heading-color;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .course-search__message-detail {
   max-width: 30rem;
-  margin: 0.45rem 0 0;
-  color: $grey-dk-200;
-  font-size: 0.86rem;
+  margin:
+    $sp-2
+    0
+    0;
+  color: $grey-dk-100;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
-.course-search__message--error
-.course-search__message-title {
-  color: #b31d28;
+.course-search__message--error {
+  .course-search__message-title {
+    color: #b31d28;
+  }
 }
 
 mark.pagefind-highlight,
 .course-search mark {
-  padding: 0.04em 0.12em;
-  border-radius: 0.18em;
-  background: #fff0a6;
+  padding:
+    0.04em
+    0.12em;
+  border-radius: 0.15em;
+  background-color: #fff0a6;
   color: inherit;
+}
+
+.course-search [hidden] {
+  display: none !important;
 }
 
 html.course-search-is-open,
@@ -381,15 +468,10 @@ html.course-search-is-open body {
 }
 
 @media (max-width: 31.25rem) {
-  .course-search__shortcut {
-    display: none;
-  }
-
   .course-search__dialog {
     width:
       calc(100vw - 1rem);
     max-height: 88vh;
-    border-radius: 0.65rem;
   }
 
   .course-search__panel {
@@ -397,28 +479,27 @@ html.course-search-is-open body {
   }
 
   .course-search__header {
-    gap: 0.4rem;
-    padding: 0.55rem;
+    gap: $sp-1;
+    padding: $sp-2;
   }
 
   .course-search__status {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right: $sp-3;
+    padding-left: $sp-3;
   }
 
   .course-search__results {
-    padding: 0.5rem;
+    padding: $sp-1;
   }
 
   .course-search__sub-results {
-    margin-left: 0.45rem;
+    margin-left: $sp-2;
   }
 }
 
 @media (
   prefers-reduced-motion: reduce
 ) {
-  .course-search__trigger,
   .course-search__results {
     transition: none;
   }
