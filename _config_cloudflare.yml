@@ -3,8 +3,7 @@
 # The existing _config.yml remains configured for the GitHub Pages
 # project subpath /Mathematical_Analysis_B1.
 #
-# Cloudflare Pages serves this site from the domain root, so baseurl
-# must be empty. The deployment URL is supplied dynamically through
-# Cloudflare's CF_PAGES_URL environment variable in the build command.
+# Cloudflare Pages serves this mirror from the domain root.
 
+url: "https://mathematical-analysis-b1.pages.dev"
 baseurl: ""
