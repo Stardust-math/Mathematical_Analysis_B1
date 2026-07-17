@@ -81,7 +81,7 @@ if (root) {
 
   if (shortcutLabel) {
     shortcutLabel.textContent =
-      isApplePlatform ? '⌘ K' : 'Ctrl K';
+      isApplePlatform ? '⌘ + K' : 'Ctrl + K';
   }
 
   /*
