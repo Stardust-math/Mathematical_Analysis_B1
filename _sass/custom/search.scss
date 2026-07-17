@@ -1,18 +1,24 @@
 .course-search {
   min-width: 0;
+  flex: 1 1 auto;
+
+  @include mq(md) {
+    align-self: stretch;
+  }
 }
 
 /*
  * Search trigger
  *
  * The outer .search and .search-input-wrap classes reuse the native
- * Just the Docs search layout. This keeps the trigger aligned with
- * the theme header on both desktop and mobile.
+ * Just the Docs search layout. Only the desktop width restriction is
+ * removed so that the trigger can use the full available header width.
  */
 .course-search__trigger {
   appearance: none;
   display: flex;
   width: 100%;
+  max-width: none;
   align-items: center;
   gap: $sp-2;
   padding:
@@ -27,6 +33,9 @@
   text-align: left;
 
   @include mq(md) {
+    inset: 0;
+    width: auto;
+    max-width: none;
     padding:
       $sp-2
       $gutter-spacing-sm
@@ -112,7 +121,7 @@
   line-height: 1.35;
   white-space: nowrap;
 
-  @include mq(sm) {
+  @include mq(md) {
     display: inline-flex;
   }
 }
@@ -125,11 +134,8 @@
   inset:
     50% auto auto 50%;
   width:
-    min(
-      48rem,
-      calc(100vw - 2rem)
-    );
-  max-width: none;
+    calc(100vw - 2rem);
+  max-width: $content-width;
   max-height:
     min(82vh, 46rem);
   margin: 0;
@@ -181,6 +187,7 @@
 .course-search__input-wrap {
   position: relative;
   display: flex;
+  width: 100%;
   min-width: 0;
   flex: 1 1 auto;
   align-items: center;
@@ -190,6 +197,12 @@
       rgba(0, 0, 0, 0.12),
     0 3px 10px
       rgba(0, 0, 0, 0.08);
+
+  &:focus-within {
+    .course-search__input-icon {
+      color: $link-color;
+    }
+  }
 }
 
 .course-search__input-icon {
@@ -226,10 +239,6 @@
       2px solid
       $link-color;
     outline-offset: -2px;
-
-    + .course-search__input-icon {
-      color: $link-color;
-    }
   }
 
   &::-webkit-search-cancel-button {

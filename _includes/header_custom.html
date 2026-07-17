@@ -18,9 +18,10 @@
     <svg
       class="course-search__trigger-icon"
       viewBox="0 0 24 24"
-      aria-hidden="true">
-      <circle cx="11" cy="11" r="7"></circle>
-      <path d="m20 20-4.2-4.2"></path>
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
     </svg>
 
     <span class="course-search__trigger-text">
@@ -29,7 +30,8 @@
 
     <kbd
       class="course-search__shortcut"
-      data-search-shortcut-label>
+      data-search-shortcut-label
+    >
       Ctrl K
     </kbd>
   </button>
@@ -46,7 +48,8 @@
     >
       <h2
         class="sr-only"
-        id="course-search-title">
+        id="course-search-title"
+      >
         站内搜索
       </h2>
 
@@ -55,14 +58,16 @@
           <svg
             class="course-search__input-icon"
             viewBox="0 0 24 24"
-            aria-hidden="true">
-            <circle cx="11" cy="11" r="7"></circle>
-            <path d="m20 20-4.2-4.2"></path>
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
 
           <label
             class="sr-only"
-            for="course-search-input">
+            for="course-search-input"
+          >
             搜索课程内容
           </label>
 
@@ -83,7 +88,8 @@
             type="button"
             aria-label="清空搜索内容"
             data-search-clear
-            hidden>
+            hidden
+          >
             ×
           </button>
         </div>
@@ -91,7 +97,8 @@
         <button
           class="course-search__close"
           type="button"
-          data-search-close>
+          data-search-close
+        >
           关闭
         </button>
       </div>
@@ -99,15 +106,15 @@
       <p
         class="course-search__status"
         data-search-status
-        aria-live="polite">
-      </p>
+        aria-live="polite"
+      ></p>
 
       <div
         class="course-search__results"
         id="course-search-results"
         data-search-results
-        aria-label="搜索结果">
-      </div>
+        aria-label="搜索结果"
+      ></div>
     </div>
   </dialog>
 </div>
