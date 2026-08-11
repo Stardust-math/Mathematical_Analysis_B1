@@ -1,0 +1,53 @@
+# 《数学分析(B1)》课程资料数据。
+#
+# 维护方式：
+# 1. 将资料文件上传到 assets/materials/ 下的合适子目录；
+# 2. 在对应分类的 items 中新增一条记录；
+# 3. 本文件中的排列顺序就是页面上的显示顺序；
+# 4. 文件名建议使用小写英文字母、数字和连字符，避免空格与中文。
+#
+# 本地文件示例（将对应分类的 `items: []` 改成下面的结构）：
+#
+#     items:
+#       - title: 第一章讲义
+#         description: 实数理论与数列极限的课堂讲义。
+#         path: /assets/materials/lecture-notes/chapter-01.pdf
+#         format: PDF
+#         scope: 第 1 章
+#         size: 2.4 MB
+#         updated: "2026-09-07"
+#         badge: 新
+#         preview: true
+#         download_name: mathematical-analysis-b1-chapter-01.pdf
+#
+# 外部资源示例：
+#
+#     items:
+#       - title: 课程参考页面
+#         description: 任课教师指定的在线参考资料。
+#         external: true
+#         url: https://example.com/
+#         format: WEB
+#         updated: "2026-09-07"
+#         action_label: 打开页面
+
+categories:
+  - id: lecture-notes
+    title: 课程讲义
+    description: 任课教师发布的讲义、课堂补充材料与板书整理。
+    items: []
+
+  - id: assignments
+    title: 作业资料
+    description: 作业题目、提交说明，以及在允许时间发布的参考答案。
+    items: []
+
+  - id: tutorials
+    title: 习题课资料
+    description: 习题课讲义、例题整理与阶段复习材料。
+    items: []
+
+  - id: references
+    title: 补充资料
+    description: 与课程内容相关的参考书目、拓展阅读及其他辅助材料。
+    items: []

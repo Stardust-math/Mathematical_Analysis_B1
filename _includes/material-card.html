@@ -1,0 +1,74 @@
+{% assign material = include.material %}
+{% if material.external %}
+  {% assign material_href = material.url %}
+{% else %}
+  {% assign material_href = material.path | relative_url %}
+{% endif %}
+
+<article class="material-card">
+  <div class="material-card__heading">
+    <span class="material-card__format">
+      {{ material.format | default: "FILE" | escape }}
+    </span>
+
+    <div class="material-card__title-group">
+      <h3 class="material-card__title">{{ material.title | escape }}</h3>
+      {% if material.badge %}
+        <span class="material-card__badge">{{ material.badge | escape }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if material.description %}
+    <p class="material-card__description">{{ material.description | escape }}</p>
+  {% endif %}
+
+  {% if material.scope or material.updated or material.size %}
+    <ul class="material-card__meta" aria-label="资料信息">
+      {% if material.scope %}
+        <li><strong>范围</strong> {{ material.scope | escape }}</li>
+      {% endif %}
+      {% if material.updated %}
+        <li>
+          <strong>更新</strong>
+          <time datetime="{{ material.updated | escape }}">{{ material.updated | escape }}</time>
+        </li>
+      {% endif %}
+      {% if material.size %}
+        <li><strong>大小</strong> {{ material.size | escape }}</li>
+      {% endif %}
+    </ul>
+  {% endif %}
+
+  <div class="material-card__actions">
+    {% if material.external %}
+      <a
+        class="btn material-card__action material-card__action--primary"
+        href="{{ material_href | escape }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="{{ material.action_label | default: '打开资源' | escape }}：{{ material.title | escape }}（在新窗口打开）">
+        {{ material.action_label | default: "打开资源" | escape }}
+      </a>
+    {% else %}
+      {% if material.preview %}
+        <a
+          class="btn material-card__action material-card__action--secondary"
+          href="{{ material_href | escape }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="在线查看：{{ material.title | escape }}（在新窗口打开）">
+          在线查看
+        </a>
+      {% endif %}
+
+      <a
+        class="btn material-card__action material-card__action--primary"
+        href="{{ material_href | escape }}"
+        download{% if material.download_name %}="{{ material.download_name | escape }}"{% endif %}
+        aria-label="{{ material.download_label | default: '下载资料' | escape }}：{{ material.title | escape }}">
+        {{ material.download_label | default: "下载资料" | escape }}
+      </a>
+    {% endif %}
+  </div>
+</article>

@@ -11,6 +11,7 @@
 
 // Course website modules
 @import 'search';
+@import 'materials';
 
 // Overrides
 code {
@@ -38,7 +39,6 @@ summary {
     display: block;
     grid-template-columns: none;
   }
-
   dt {
     font-weight: bold;
     text-align: start;
@@ -81,7 +81,6 @@ select {
     "楷体",
     serif;
 }
-
 code,
 pre,
 .highlight,
