@@ -23,9 +23,9 @@ categories:
     description: 习题课讲义、例题整理与阶段复习材料。
     items: []
 
-  - id: reference-textbooks
-    title: 参考教材
-    description: 与数学分析 B1 课程相关的教材、习题课讲义与拓展阅读资料。
+  - id: references
+    title: 补充资料
+    description: 与课程内容相关的参考教材、拓展阅读、往年试题及其他辅助材料。
     items:
       - title: 数学分析 B1 习题课讲义
         description: Qifan（1900）、ZongYuxuan（1901）整理。
@@ -81,10 +81,6 @@ categories:
         updated: "2026-08-27"
         preview: true
 
-  - id: past-exams
-    title: 往年试题
-    description: 数学分析 B1 往年期中、期末及单元测试试题。
-    items:
       - title: 2024 年数学分析 B1 期末考试
         path: /assets/materials/past-exams/2024-b1-final.pdf
         format: PDF
