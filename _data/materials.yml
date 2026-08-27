@@ -1,8 +1,9 @@
 # 《数学分析(B1)》课程资料数据。
 #
 # 文件存放位置：
-# - 参考教材：assets/materials/reference-textbooks/
-# - 往年试题：assets/materials/past-exams/
+# - 课程讲义：assets/materials/lecture-notes/
+# - 补充资料：assets/materials/supplementary-resources/
+# - 往年考题：assets/materials/past-exams/
 #
 # 本文件中的排列顺序就是课程资料页面中的显示顺序。
 # 文件名统一使用小写英文字母、数字和连字符。
@@ -11,7 +12,15 @@ categories:
   - id: lecture-notes
     title: 课程讲义
     description: 任课教师发布的讲义、课堂补充材料与板书整理。
-    items: []
+    items:
+      - title: 数学分析讲义（第一册）
+        description: 程艺、陈卿、李平编著。
+        path: /assets/materials/lecture-notes/mathematical-analysis-lecture-notes-vol-1.pdf
+        format: PDF
+        scope: 第一册
+        size: 45.22 MiB
+        updated: "2026-08-27"
+        preview: true
 
   - id: assignments
     title: 作业资料
@@ -25,59 +34,88 @@ categories:
 
   - id: references
     title: 补充资料
-    description: 与课程内容相关的参考教材、拓展阅读、往年试题及其他辅助材料。
+    description: 与课程内容相关的参考教材、拓展阅读及其他辅助材料。
     items:
-      - title: 数学分析 B1 习题课讲义
-        description: Qifan（1900）、ZongYuxuan（1901）整理。
-        path: /assets/materials/reference-textbooks/b1-tutorial-notes-qifan-zongyuxuan.pdf
+      - title: 任广斌《数学分析(A1)》课程讲义（2023）
+        description: 任广斌编写，中国科学技术大学课程讲义。
+        path: /assets/materials/supplementary-resources/ren-guangbin-mathematical-analysis-a1-2023.pdf
         format: PDF
-        scope: 参考讲义
-        size: 0.82 MiB
+        scope: A1 课程讲义
+        size: 10.64 MiB
         updated: "2026-08-27"
         preview: true
 
-      - title: 数学分析讲义（第一册）
-        description: 程艺、陈卿、李平编著。
-        path: /assets/materials/reference-textbooks/mathematical-analysis-lecture-notes-vol-1.pdf
-        format: PDF
-        scope: 第一册
-        size: 45.22 MiB
-        updated: "2026-08-27"
-        preview: true
-
-      - title: 微积分学教程
-        description: Г. М. 菲赫金哥尔茨著，全三卷。
-        path: /assets/materials/reference-textbooks/calculus-course-volumes-1-3.pdf
-        format: PDF
-        scope: 全三卷
-        size: 54.80 MiB
-        updated: "2026-08-27"
-        preview: true
-
-      - title: 数学分析教程（上册）
-        description: 常庚哲、史济怀编著，第 3 版。
-        path: /assets/materials/reference-textbooks/mathematical-analysis-tutorial-vol-1-3rd-edition.pdf
+      - title: 数学分析教程（上册·第 3 版）
+        description: 常庚哲、史济怀编著。
+        path: /assets/materials/supplementary-resources/mathematical-analysis-tutorial-vol-1-3rd-edition.pdf
         format: PDF
         scope: 上册
         size: 13.68 MiB
         updated: "2026-08-27"
         preview: true
 
-      - title: 数学分析原理（上）
-        description: Rudin《数学分析原理》参考资料。
-        path: /assets/materials/reference-textbooks/principles-of-mathematical-analysis-rudin-vol-1.pdf
+      - title: 数学分析教程（下册·第 3 版）
+        description: 常庚哲、史济怀编著。
+        path: /assets/materials/supplementary-resources/mathematical-analysis-tutorial-vol-2-3rd-edition.pdf
         format: PDF
-        scope: 上册
-        size: 3.75 MiB
+        scope: 下册
+        size: 38.02 MiB
+        updated: "2026-08-27"
+        preview: true
+
+      - title: 卓里奇《数学分析》（第 1 卷·第 1 分册）
+        description: B. A. 卓里奇著，蒋铎、王昆扬、周美珂、邝荣雨译。
+        path: /assets/materials/supplementary-resources/zorich-mathematical-analysis-vol-1-part-1.pdf
+        format: PDF
+        scope: 第 1 卷·第 1 分册
+        size: 12.97 MiB
         updated: "2026-08-27"
         preview: true
 
       - title: 数学分析习题课讲义（上册）
-        description: 谢惠民编著。
-        path: /assets/materials/reference-textbooks/mathematical-analysis-exercise-course-vol-1.pdf
+        description: 谢惠民、恽自求、易法槐、钱定边编著。
+        path: /assets/materials/supplementary-resources/mathematical-analysis-exercise-class-notes-vol-1.pdf
         format: PDF
         scope: 上册
         size: 8.07 MiB
+        updated: "2026-08-27"
+        preview: true
+
+      - title: 数学分析习题课讲义（下册）
+        description: 谢惠民、恽自求、易法槐、钱定边编著。
+        path: /assets/materials/supplementary-resources/mathematical-analysis-exercise-class-notes-vol-2.pdf
+        format: PDF
+        scope: 下册
+        size: 7.43 MiB
+        updated: "2026-08-27"
+        preview: true
+
+  - id: past-exams
+    title: 往年考题
+    description: 收录历年数学分析(B1)期中、期末及相关考试资料，供复习与自测。
+    items:
+      - title: 数学分析(B)历年考试真题（2023 版）
+        description: 收录多个学年的 B1、B2、B3 测验及考试真题。
+        path: /assets/materials/past-exams/mathematical-analysis-b-exam-collection-2023.pdf
+        format: PDF
+        scope: 历年真题合集
+        size: 0.58 MiB
+        updated: "2026-08-27"
+        preview: true
+
+      - title: 2025 年秋季学期数学分析 B1 期末考试参考答案
+        path: /assets/materials/past-exams/2025-b1-final-solutions.pdf
+        format: PDF
+        scope: 期末考试参考答案
+        size: 0.33 MiB
+        updated: "2026-08-27"
+        preview: true
+
+      - title: 2025 年秋季学期数学分析 B1 期中考试参考答案
+        path: /assets/materials/past-exams/2025-b1-midterm-solutions.pdf
+        format: PDF
+        scope: 期中考试参考答案
+        size: 0.32 MiB
         updated: "2026-08-27"
         preview: true
 
@@ -110,14 +148,6 @@ categories:
         format: PDF
         scope: 期中考试
         size: 0.06 MiB
-        updated: "2026-08-27"
-        preview: true
-
-      - title: 2023 年吴健老师班第一次单元测试
-        path: /assets/materials/past-exams/2023-wujian-unit-test-1.pdf
-        format: PDF
-        scope: 第一次单元测试
-        size: 0.04 MiB
         updated: "2026-08-27"
         preview: true
 
