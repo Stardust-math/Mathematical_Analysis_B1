@@ -26,7 +26,7 @@ exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "pagefind.yml"]
 remote_theme: just-the-docs/just-the-docs@v0.12.0
 color_scheme: light
 search_enabled: false
-heading_anchors: true
+heading_anchors: false
 permalink: pretty
 aux_links:
   #Kevin Lin:
