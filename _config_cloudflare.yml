@@ -7,3 +7,22 @@
 
 url: "https://mathematical-analysis-b1.pages.dev"
 baseurl: ""
+
+# Cloudflare Pages limits each static asset to 25 MiB.
+# The two oversized PDFs are served from the course-specific R2 bucket
+# in the Cloudflare deployment, while GitHub Pages keeps its local copies.
+#
+# Because this configuration is loaded after _config.yml, the original
+# exclusions must also be retained here.
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "LICENSE"
+  - "pagefind.yml"
+  - "assets/materials/reference-textbooks/calculus-course-volumes-1-3.pdf"
+  - "assets/materials/reference-textbooks/mathematical-analysis-lecture-notes-vol-1.pdf"
+
+# Jekyll normally ignores underscore-prefixed files.
+# Include Cloudflare Pages' redirect configuration in the build output.
+include:
+  - "_redirects"
