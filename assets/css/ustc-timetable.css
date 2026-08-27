@@ -68,14 +68,18 @@
 }
 
 .ustc-timetable .course-cell {
-  padding: 0.28rem;
+  position: relative;
+  padding: 0;
   background: #f7f8fa;
 }
 
 .ustc-timetable .course-card {
+  position: absolute;
+  inset: 0.18rem;
+
   display: flex;
-  min-height: 72px;
-  height: 100%;
+  min-height: 0;
+  height: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
