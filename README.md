@@ -83,6 +83,6 @@ seo:
 
 ### 电子作业
 
-电子作业由陈璟皓助教负责批改。
+电子作业由陈璟皓、梁思源两位助教负责批改。
 
 电子作业可发送至：[chenjinghao@mail.ustc.edu.cn](mailto:chenjinghao@mail.ustc.edu.cn)。也可以通过 QQ 提交给对应助教。
