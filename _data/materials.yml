@@ -2,6 +2,7 @@
 #
 # 文件存放位置：
 # - 课程讲义：assets/materials/lecture-notes/
+# - 作业资料：assets/materials/assignments/
 # - 补充资料：assets/materials/supplementary-resources/
 # - 往年考题：assets/materials/past-exams/
 #
@@ -25,7 +26,15 @@ categories:
   - id: assignments
     title: 作业资料
     description: 作业题目、提交说明，以及在允许时间发布的参考答案。
-    items: []
+    items:
+      - title: 作业答案（截至第二次作业）
+        description: 收录第一次、第二次作业的参考答案。
+        path: /assets/materials/assignments/homework-solutions-through-assignment-2.pdf
+        format: PDF
+        scope: 第 1～2 次作业
+        size: 1.90 MiB
+        updated: "2026-09-23"
+        preview: true
 
   - id: tutorials
     title: 习题课资料
